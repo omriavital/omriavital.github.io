@@ -355,11 +355,11 @@ function load_from_local_storage() {
         show_help();
         return;
     }
-    if (date !== today) {
+    //if (date !== today) {
         localStorage.removeItem('date');
         localStorage.removeItem('guesses');
         return;
-    }
+   // }
     guesses = JSON.parse(localStorage.getItem('guesses'));
     for (let i = 0; i < guesses.length; i++) {
         const guess = guesses[i];
