@@ -44,19 +44,21 @@ const HEBREW_KEYMAP = {
 };
 const FINAL_LETTERS = {'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ'};
 const FINALED_LETTERS = {'כ': 'ך', 'מ': 'ם', 'נ': 'ן', 'פ': 'ף', 'צ': 'ץ'};
-const today = get_date();
-const word_of_the_day =
-    today === '15.1.2022' ? 'כימאי' :
-    today === '16.1.2022' ? 'מעטפת' :
-    today === '17.1.2022' ? 'נקיות' :
-    today === '18.1.2022' ? 'חיסון' :
-    today === '19.1.2022' ? 'שתיקה' :
-    today === '20.1.2022' ? 'מבואר' :
-    today === '21.1.2022' ? 'יתגלה' :
-    today === '22.1.2022' ? 'רשאים' :
-    today === '23.1.2022' ? 'הוביל' :
-    today === '24.1.2022' ? 'זינוק' :
-    FREQUENT_WORDS[cyrb53('meduyeket ' + today) % FREQUENT_WORDS.length];
+let indexCur = localStorage.getItem("indexCur");
+if (indexCur == null) {
+    indexCur = 0;
+}
+
+const words = [
+  "גלבוע",
+  "מאזדה"
+  "איריס",
+  ""
+]
+const word_of_the_day = words[indexCur]
+console.log(word_of_the_day)
+
+    // FREQUENT_WORDS[cyrb53('meduyeket ' + today) % FREQUENT_WORDS.length];
 let guesses = [];
 
 
@@ -277,6 +279,7 @@ function make_guess() {
         row_elt.classList.add('win');
         const CONGRATULATIONS = ['גאוני', 'מדהים', 'נפלא', 'סחתיין', 'נהדר', 'מקסים'];
         popup(CONGRATULATIONS[guesses.length - 1]);
+        localStorage.setItem("indexCur", localStorage.getItem("indexCur")++);
         window.setTimeout(show_success_screen, 3600);
     } else {
         window.setTimeout(set_keyboard_key_colors, 100);
@@ -372,6 +375,7 @@ function load_from_local_storage() {
     }
     if (guesses[guesses.length - 1] === word_of_the_day || guesses.length === 6) {
       //  window.setTimeout(show_success_screen, 500);
+
     }
     set_keyboard_key_colors();
 }
