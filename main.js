@@ -52,9 +52,19 @@ if (indexCur == null) {
 history.back()
 const words = [
   "גלבוע",
+  "משפחה",
+  "כספים",
+  "כלכלה",
+  "לאומי",
+  "פנסיה",
+  "ספינה",
+  "חופשה",
+  "דיסני"
+  "טבריה",
   "מאזדה",
   "איריס",
-  ""
+  "עופרה",
+  "עומרי"
 ]
 const word_of_the_day = words[indexCur % words.length]
 console.log(word_of_the_day)
