@@ -49,7 +49,7 @@ let indexCur = localStorage.getItem("indexCur");
 if (indexCur == null) {
     indexCur = 0;
 }
-
+history.back()
 const words = [
   "גלבוע",
   "מאזדה",
