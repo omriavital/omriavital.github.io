@@ -280,7 +280,7 @@ function make_guess() {
         row_elt.classList.add('win');
         const CONGRATULATIONS = ['גאוני', 'מדהים', 'נפלא', 'סחתיין', 'נהדר', 'מקסים'];
         popup(CONGRATULATIONS[guesses.length - 1]);
-        localStorage.setItem("indexCur", indexCur++);
+        localStorage.setItem("indexCur", ++indexCur);
         window.setTimeout(show_success_screen, 3600);
     } else {
         window.setTimeout(set_keyboard_key_colors, 100);
