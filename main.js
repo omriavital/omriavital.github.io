@@ -49,7 +49,7 @@ let indexCur = localStorage.getItem("indexCur");
 if (indexCur == null) {
     indexCur = 0;
 }
-history.back()
+if (history.state === 'success') history.back();
 const words = [
   "גלבוע",
   "משפחה",
@@ -59,7 +59,7 @@ const words = [
   "פנסיה",
   "ספינה",
   "חופשה",
-  "דיסני"
+  "דיסני",
   "טבריה",
   "מאזדה",
   "איריס",
