@@ -51,11 +51,11 @@ if (indexCur == null) {
 
 const words = [
   "גלבוע",
-  "מאזדה"
+  "מאזדה",
   "איריס",
   ""
 ]
-const word_of_the_day = words[indexCur]
+const word_of_the_day = words[indexCur % words.length]
 console.log(word_of_the_day)
 
     // FREQUENT_WORDS[cyrb53('meduyeket ' + today) % FREQUENT_WORDS.length];
