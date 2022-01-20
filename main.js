@@ -371,7 +371,7 @@ function load_from_local_storage() {
         }
     }
     if (guesses[guesses.length - 1] === word_of_the_day || guesses.length === 6) {
-        window.setTimeout(show_success_screen, 500);
+      //  window.setTimeout(show_success_screen, 500);
     }
     set_keyboard_key_colors();
 }
