@@ -44,6 +44,7 @@ const HEBREW_KEYMAP = {
 };
 const FINAL_LETTERS = {'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ'};
 const FINALED_LETTERS = {'כ': 'ך', 'מ': 'ם', 'נ': 'ן', 'פ': 'ף', 'צ': 'ץ'};
+const today = get_date();
 let indexCur = localStorage.getItem("indexCur");
 if (indexCur == null) {
     indexCur = 0;
